@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Layout using Grid</title>
+    <style>
+        body{
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: rgb(218, 216, 216);
+        }
+        main{
+            width: 1200px;
+            background-color: #fff;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: 80px 180px 180px 80px;
+            grid-gap: 20px;
+        }
+        nav{
+            background-color: rgb(42, 29, 223);
+            grid-column: 1/-1;
+            grid-row: 1/2;
+        }
+        aside{
+            background-color: rgb(139, 33, 33);
+            grid-column: 1/2;
+            grid-row: 2/4;
+        }
+        article.box1{
+            background-color: rgb(68, 61, 61);
+        }
+        article.box2{
+            background-color: rgb(85, 71, 71);
+        }
+        article.box3{
+            background-color: rgb(114, 88, 88);
+        }
+        section{
+            background-color: rgb(167, 182, 30);
+            grid-column: 2/-1;
+            grid-row: 3/4;
+        }
+        footer{
+            background-color: rgb(0, 0, 0);
+            color: gray;
+            grid-column: 1/-1;
+            grid-row: 4/5;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <nav>Navbar</nav>
+        <aside>Aside</aside>
+        <article class="box1">box1</article>
+        <article class="box2">box2</article>
+        <article class="box3">box3</article>
+        <section>Hello my name is shuaib khan</section>
+        <footer>I am footer</footer>
+    </main>
+</body>
+</html>
